@@ -452,7 +452,7 @@
 
   // Lenis
   if(!reduced && window.Lenis){
-    var lenis=new Lenis({lerp:0.085, wheelMultiplier:1});
+    var lenis=new Lenis({lerp:0.2, wheelMultiplier:1, smoothWheel:true, syncTouch:false});
     function raf(t){lenis.raf(t);requestAnimationFrame(raf);}
     requestAnimationFrame(raf);
     if(window.gsap&&window.ScrollTrigger){ lenis.on('scroll',ScrollTrigger.update); }
